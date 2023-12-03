@@ -1,10 +1,10 @@
-# Title (replace with your title)
+# Regex of a Hex Value
 
-Introductory paragraph (replace this with your text)
+    Have you ever wanted to find a Hex Value in a whole pile of data or a whole text? Me neither, I don't even know What a Hex Value is or what it's used for, but let's do it. This will go over how to use a regex to find Hex Values in any pile of text or code.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+    The reges that I will ge going over is for a Hex value or hex values, Which would look something like this: `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`. 
 
 ## Table of Contents
 
