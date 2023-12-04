@@ -19,7 +19,7 @@
 ## Regex Components
 
     This regex has many components such as: 
-    
+
     "^" and "$" which are "anchors", 
 
     "{}" which is "quantifiers", 
@@ -42,6 +42,13 @@
     This regex does not contain any flags or character escapes.
 
 ### Anchors
+
+    As stated above, "^" and "$" are both considered to be anchors.
+
+    The "^" anchor signifies a string that begins with the characters that follow it. This could be in one of two formats:
+        An exact string match, such as "^The", where the strings "The" or "The person" match, but "the" and "the person" do not. This is because a regex is case-sensitive.
+
+    The "$" anchor signifies a string that ends with the characters that precede it. Just as with the "^" character, it can be preceded by an exact string or a range of possible matches.
 
 ### Quantifiers
 
