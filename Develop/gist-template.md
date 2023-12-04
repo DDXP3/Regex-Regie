@@ -19,6 +19,7 @@
 ## Regex Components
 
     This regex has many components such as: 
+    
     "^" and "$" which are "anchors", 
 
     "{}" which is "quantifiers", 
