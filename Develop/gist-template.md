@@ -4,8 +4,16 @@
 
 ## Summary
 
-    The reges that I will ge going over is for a Hex value or hex values, Which would look something like this: 
-    `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`. 
+    The regex that I will be going over is for a Hex Value or Hex Values, Which would look something like this: 
+        /^#?([a-f0-9]{6}|[a-f0-9]{3})$/ or ([a-f0-9]{6}|[a-f0-9]{3})
+    
+    Example Hex Values:
+        abcdef
+        1ab23c
+        123456
+        126
+        abc
+        a2f
 
 ## Table of Contents
 
@@ -15,51 +23,61 @@
 - [Bracket Expressions](#bracket-expressions)
 - [Character Classes](#character-classes)
 - [The OR Operator](#the-or-operator)
+- [Summed Up](#summed-up)
 
 ## Regex Components
 
     This regex has many components such as: 
 
-    "^" and "$" which are "anchors", 
+        anchors which are "^" and "$", 
 
-    "{}" which is "quantifiers", 
+        quantifiers which are "?", "{6}" and "{3}",
 
-    "()" which is "grouping constructs", 
+        grouping constructs which is "()",
 
-    "[]" which is "bracket expressions", 
+        bracket expressions which is "[]",
 
-    ".", "\d", "\w", and "\s" which are all "character classes" each which have their own class as implied such as:
-        "." which matches any character except the newline character,
+        character classes which are "a-f" and 0-9,
 
-        "\d" which matches any arabic numeral digit, which is also equivalent to the bracket expression "[0-9]",
+        and OR operator which is "|",
 
-        "\w" which matches any alphanumeric character from the basic latin alphabet, including the underscore "(_)", which is also equivalent to the bracket expression "[A-Za-z0-9_-]",
-
-        and "\s" which matches a single whitespace character, which also includes tabs and line breaks.
-    
-    and "|" which is "the OR operator".
-
-    This regex does not contain any flags or character escapes.
+        this regex does not contain any flags or character escapes.
 
 ### Anchors
 
-    As stated above, "^" and "$" are both considered to be anchors.
-
-    The "^" anchor signifies a string that begins with the characters that follow it. This could be in one of two formats:
-        An exact string match, such as "^The", where the strings "The" or "The person" match, but "the" and "the person" do not. This is because a regex is case-sensitive.
-
-    The "$" anchor signifies a string that ends with the characters that precede it. Just as with the "^" character, it can be preceded by an exact string or a range of possible matches.
+    The anchor "^" states where the string starts, while the anchor "$" states where the string ends.
 
 ### Quantifiers
 
+    The quantifier "?" states that the matches of the pattern is either zero or one, while the quantifiers of "{6}" and "{3}" states that the matches of the pattern is 6 times and 3 times.
+
 ### Grouping Constructs
+
+    The grouping construct "()" states the pattern that is trying to be matched and the quantity of it.
 
 ### Bracket Expressions
 
+    The bracket expression "[]" states the pattern that is trying to be matched.
+
 ### Character Classes
+
+    The character classes "a-f" states that it's trying to match with a letter of either a, b, c, d, e, or f, while "0-9" states that it's trying to match with a number between 0 to 9.
 
 ### The OR Operator
 
+    The OR operator "|" states that it's either matched with one set of pattern or another.
+
+### Summed Up
+
+    To sum everything up:
+        "a-f0-9" states that it's either an a, b, c, d, e, f, or a number from 0 to 9, and "{6}" states that it's matched 6 times. You can look at the examples of Hex Values on the Summary. "|" states that the first part is viable or the next part is viable too, which is mostly the same but with "{3}" which states that it's matched 3 times. Again, examples can be seen on the summary.
+    
+    So a Hex Value can be either 6 or 3 characters long, containing any combanation of numbers between 0 to 9 and/or a, b, c, d, e, or f.
+
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+    Sichoun Nplhaib Lee - https://github.com/DDXP3
+
+## Credits
+
+    https://coding-boot-camp.github.io/full-stack/computer-science/regex-tutorial
